@@ -17,7 +17,6 @@ Backend Setup :<br>
 Navigate to the **code** directory.<br>
 Open a terminal and run **npm i**.<br>
 Modify server.js:
-Change the MongoDB connection string from **process.env.MONGO_URI** to <br> **'mongodb+srv://dass39:dass39@emri.vubkrrz.mongodb.net/?retryWrites=true&w=majority'.**<br>
 Start the server by running **nodemon server.js**.<br>
 
 <h2>Frontend Setup</h2>
