@@ -1,0 +1,74 @@
+.sign-up-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .sign-up-form {
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 400px; /* Limit maximum width */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 2px solid transparent;
+    box-shadow: none;
+  }
+  
+  .signupbutton {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .signupbutton:hover {
+    background-color: #2980b9;
+  }
+  
+  .sp {
+    font-size: 25px;
+    text-align: center; /* Align text center for responsiveness */
+    margin-top: 20px; /* Add space between the button and text */
+  }
+  
+  .outersignup {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Armstrong_Ambulance_P17.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  input:hover {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media screen and (max-width: 480px) {
+    .sign-up-form {
+      width: 100%; /* Adjust width to fill the screen on smaller devices */
+      max-width: none; /* Remove maximum width */
+    }
+  }
+  
