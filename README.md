@@ -1,65 +1,74 @@
-<h1>EMRI Web App</h1>
+# 🚑 EMRI Web App 💉
 
-- This is a web application designed to assist doctors in managing the treatment of several patients belonging to the 25 ambulances alloted to him using data such as patient vitals, accessing medical documents, and communicating with Emergency Medical Technicians (EMTs) for critical cases.
+- This web application is designed to assist doctors in managing the treatment of patients assigned to them across 25 ambulances. It utilizes patient vitals, medical documents, and live communication with Emergency Medical Technicians (EMTs) for critical cases.
 
-- The application is built using React for the frontend and Node.js with GraphQL for the backend.
+- Built using React for the frontend and Node.js with GraphQL for the backend.
 
-The features being provided are the following :-
+## Features Provided 🌟
 
-1. View Vitals: View vitals of patients assigned to the doctor.
-2. Document Query: Search for medicines or procedures from uploaded medical documents.
-3. Live Chat: Communicate with EMT assistants regarding critical cases.
+1. **View Vitals:** View vitals of patients assigned to the doctor.
+2. **Document Query:** Search for medicines or procedures from uploaded medical documents.
+3. **Live Chat:** Communicate with EMT assistants regarding critical cases.
 
-<h2>Setup Instructions</h2>
+## Setup Instructions 🛠️
 
-To run the application, follow these steps:<br>
-Backend Setup :<br>
-Navigate to the **code** directory.<br>
-Open a terminal and run **npm i**.<br>
+### Backend Setup:
+
+Navigate to the **code** directory.
+
+Open a terminal and run `npm i`.
+
 Modify server.js:
-Start the server by running **nodemon server.js**.<br>
 
-<h2>Frontend Setup</h2>
+Start the server by running `nodemon server.js`.
 
-    Navigate to the client directory.
-    Open a terminal and run npm i.
-    Start the frontend server by running npm run start.
-    Access the application at http://localhost:3000.
+### Frontend Setup:
 
-<h2>Live Chat Setup</h2>
+Navigate to the client directory.
 
-    Navigate to the emt dummy 2 directory.
-    Open a terminal and run npm i.
-    Start the chat server by running npm run start.
-    Access the dummy EMT chat at http://localhost:3001.
+Open a terminal and run `npm i`.
 
-<h2>Default Login (for Development)</h2>
+Start the frontend server by running `npm run start`.
 
-    Username: admin
-    Password: admin
+Access the application at [http://localhost:3000](http://localhost:3000).
 
-<h2>Usage</h2>
+### Live Chat Setup:
 
-    Navigate to / to access the login page.
-    For Signup /signup to go to signup page.
-    For development, you may directly navigate to /home.
-    Once logged in, you'll be able to view patient vitals, search medical documents, and chat with EMTs.
+Navigate to the emt dummy 2 directory.
 
-<h2>Supported Links</h2>
+Open a terminal and run `npm i`.
 
-    / Login page.
-    /signup : Signup Page.
-    /passwordreset : To reset password
-    /forgotpassword : To enter Email to reset password after forgetting the real one
-    /forgotresetpassword : Opens after clicking on link sent on Email to reset password
-    /home: Dashboard for doctors.
-    /emt-dummy-2: Chat interface for dummy EMT.
+Start the chat server by running `npm run start`.
 
-<h2>Note</h2>
+Access the dummy EMT chat at [http://localhost:3001](http://localhost:3001).
 
-    Ensure that the port used is 3000 for the client and 3001 for the EMT chat. Modify CORS origin URL if necessary.
+## Default Login (for Development) 🔐
 
-## How to Contribute
+- **Username:** admin
+- **Password:** admin
+
+## Usage 🖥️
+
+- Navigate to `/` to access the login page.
+- For Signup, go to `/signup`.
+- For development, you may directly navigate to `/home`.
+- Once logged in, you'll be able to view patient vitals, search medical documents, and chat with EMTs.
+
+## Supported Links 🌐
+
+- `/`: Login page.
+- `/signup`: Signup Page.
+- `/passwordreset`: To reset password.
+- `/forgotpassword`: To enter Email to reset password after forgetting the real one.
+- `/forgotresetpassword`: Opens after clicking on link sent on Email to reset password.
+- `/home`: Dashboard for doctors.
+- `/emt-dummy-2`: Chat interface for dummy EMT.
+
+## Note 📝
+
+- Ensure that the port used is 3000 for the client and 3001 for the EMT chat. Modify CORS origin URL if necessary.
+
+## How to Contribute 🌱
 
 If you'd like to contribute to this project, please follow these steps:
 1. Fork the repository.
@@ -68,7 +77,7 @@ If you'd like to contribute to this project, please follow these steps:
 4. Push to the branch: `git push origin feature/new-feature`.
 5. Submit a pull request.
 
-## Authors
+## Authors 🧑‍💻
 
 - [Shivam Mittal](https://github.com/mittalshivam2709)
 - [Manan Garg](https://github.com/manangarg21)
