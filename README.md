@@ -1,86 +1,109 @@
-# 🚑 EMRI Web App 💉
+# 🚑 EMRI Web App
 
-- This web application is designed to assist doctors in managing the treatment of patients assigned to them across 25 ambulances. It utilizes patient vitals, medical documents, and live communication with Emergency Medical Technicians (EMTs) for critical cases.
+This is a web application designed to assist doctors in managing the treatment of several patients belonging to the 25 ambulances allotted to them using data such as patient vitals, accessing medical documents, and communicating with Emergency Medical Technicians (EMTs) for critical cases.
 
-- Built using React for the frontend and Node.js with GraphQL for the backend.
+The application is built using **React** for the frontend and **Node.js** with **GraphQL** for the backend, and it uses **Amazon S3** for file storage.
 
-## Features Provided 🌟
+## 🌟 Features
 
-1. **View Vitals:** View vitals of patients assigned to the doctor.
-2. **Document Query:** Search for medicines or procedures from uploaded medical documents.
-3. **Live Chat:** Communicate with EMT assistants regarding critical cases.
+- **🩺 View Vitals**: View vitals of patients assigned to the doctor.
+- **📄 Document Query**: Search for medicines or procedures from uploaded medical documents.
+- **💬 Live Chat**: Communicate with EMT assistants of the ambulances regarding critical cases.
+- **📁 Document Management**: Admins can upload, edit, view, and delete documents.
 
-## Setup Instructions 🛠️
+## 🛠️ Setup Instructions
 
-### Backend Setup:
+### Backend Setup
 
-Navigate to the **code** directory.
+1. 📂 Navigate to the code directory.
+2. 🖥️ Open a terminal and run `npm i`.
+3. ✏️ Modify `server.js`:
+   - Change the MongoDB connection string from `process.env.MONGO_URI` to `'mongodb+srv://dass39:dass39@emri.vubkrrz.mongodb.net/?retryWrites=true&w=majority'`.
+4. 🚀 Start the servers by running `npm run dev`.
 
-Open a terminal and run `npm i`.
+### Frontend Setup
 
-Modify server.js:
+1. 📂 Navigate to the `code/client` directory.
+2. 🖥️ Open a terminal and run `npm i`.
+3. 🚀 Start the frontend server by running `npm run start`.
+4. 🌐 Access the application at `http://localhost:3000`.
 
-Start the server by running `nodemon server.js`.
+### Live Chat Setup for EMT in an Ambulance
 
-### Frontend Setup:
+1. 📂 Navigate to the `emt dummy` directory.
+2. 🖥️ Open a terminal and run `npm i`.
+3. 🚀 Start the chat server by running `npm run start`.
+4. 🌐 Access the dummy EMT chat at `http://localhost:3001`.
 
-Navigate to the client directory.
+## 🔐 For Login
 
-Open a terminal and run `npm i`.
+### For Doctors:
+- **Email**: `doctor1@gmail.com`
+- **Password**: `doctor1` (similarly for `doctor2`, `doctor3`, and so on)
 
-Start the frontend server by running `npm run start`.
+### For Admin:
+- **Email**: `admin1@gmail.com`
+- **Password**: `admin1` (similarly for `admin2`, `admin3`, and so on)
 
-Access the application at [http://localhost:3000](http://localhost:3000).
+## 🚀 Usage
 
-### Live Chat Setup:
+1. 🌐 Navigate to `/` to access the login page.
+2. 📝 For Signup, go to `/signup`.
+3. Once logged in, you can:
+   - 🩺 View patient vitals
+   - 📄 Search medical documents
+   - 💬 Chat with EMTs (if logged in as a doctor)
+   - 📁 Manage documents (if logged in as an admin)
 
-Navigate to the emt dummy 2 directory.
+## 🔗 Supported Links
 
-Open a terminal and run `npm i`.
+- `/`: Login page
+- `/signup`: Signup page
+- `/passwordreset`: Password reset page
+- `/home`: Dashboard for doctors and admins
+- `/profile`: Profile page for doctor or admin after login
 
-Start the chat server by running `npm run start`.
+## 📂 Interaction with Amazon S3 Storage
 
-Access the dummy EMT chat at [http://localhost:3001](http://localhost:3001).
+### In S3 Bucket:
+- **📄 Documents**: `EMRI_audio_files/DASS_39/Document_query/`
+- **💬 Chat Files**: `EMRI_audio_files/DASS_39/Message_files/`
 
-## Default Login (for Development) 🔐
+### API Endpoints:
 
-- **Username:** admin
-- **Password:** admin
+- **📤 Upload a file**: `POST http://localhost:5002/upload_files` (Field name: `image`)
+- **📤 Upload a document**: `POST http://localhost:5002/upload_documents` (Field name: `image`)
+- **📥 Fetch all files**: `GET http://localhost:5002/get_files`
+- **📥 Fetch all documents**: `GET http://localhost:5002/get_documents`
+- **🗑️ Delete all files**: `DELETE http://localhost:5002/delete_files`
+- **🗑️ Delete all documents**: `DELETE http://localhost:5002/delete_documents`
+- **🗑️ Delete a specific file**: `DELETE http://localhost:5002/delete_file/filename` (Replace `filename` with the actual filename)
+- **🗑️ Delete a specific document**: `DELETE http://localhost:5002/delete_document/filename` (Replace `filename` with the actual filename)
 
-## Usage 🖥️
+Please note that multiple file uploads are commented out in the codebase, allowing only single-file uploads.
 
-- Navigate to `/` to access the login page.
-- For Signup, go to `/signup`.
-- For development, you may directly navigate to `/home`.
-- Once logged in, you'll be able to view patient vitals, search medical documents, and chat with EMTs.
+## ⚠️ Note
 
-## Supported Links 🌐
+Ensure that the port used is 3000 for the client and 3001 for the EMT chat. Modify the CORS origin URL if necessary.
 
-- `/`: Login page.
-- `/signup`: Signup Page.
-- `/passwordreset`: To reset password.
-- `/forgotpassword`: To enter Email to reset password after forgetting the real one.
-- `/forgotresetpassword`: Opens after clicking on link sent on Email to reset password.
-- `/home`: Dashboard for doctors.
-- `/emt-dummy-2`: Chat interface for dummy EMT.
+## 📄 Documentation
 
-## Note 📝
+To view the code documentation, [click here](#).
 
-- Ensure that the port used is 3000 for the client and 3001 for the EMT chat. Modify CORS origin URL if necessary.
-
-## How to Contribute 🌱
+## 🤝 How to Contribute
 
 If you'd like to contribute to this project, please follow these steps:
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/new-feature`.
-3. Make your changes and commit them: `git commit -m 'Add new feature'`.
-4. Push to the branch: `git push origin feature/new-feature`.
-5. Submit a pull request.
 
-## Authors 🧑‍💻
+1. 🍴 Fork the repository.
+2. 🌿 Create a new branch: `git checkout -b feature/new-feature`.
+3. ✏️ Make your changes and commit them: `git commit -m 'Add new feature'`.
+4. 🚀 Push to the branch: `git push origin feature/new-feature`.
+5. 🔄 Submit a pull request.
 
-- [Shivam Mittal](https://github.com/mittalshivam2709)
-- [Manan Garg](https://github.com/manangarg21)
-- [Mayank Mittal](https://github.com/mayankmittal29)
-- [Bassam Adnan](https://github.com/bassamadnan)
-- [Uday Bindal](https://github.com/udaybindal01)
+## ✨ Authors
+
+- **Mayank Mittal**
+- **Shivam Mittal**
+- **Manan Garg**
+- **Bassam Adnan**
+- **Uday Bindal**
